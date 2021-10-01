@@ -1,10 +1,10 @@
-import { Table } from "./components/Table/Table";
+import { BrowserRouter, Route } from "react-router-dom";
+import { UserPage } from "./components/UserPage/UserPage";
 
 export default function Root() {
   return (
-    <section>
-      <h1>Users</h1>
-      <Table />
-    </section>
+    <BrowserRouter>
+      <Route path="/users" component={UserPage} />
+    </BrowserRouter>
   );
 }
