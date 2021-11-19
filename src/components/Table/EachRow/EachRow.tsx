@@ -1,6 +1,9 @@
 import React from "react";
 import { IUserData } from "../../../api/user.api";
-import "./EachRow.style.css";
+// import "./EachRow.style.css";
+
+//@ts-ignore
+import { Styles } from "@react-mf/styleguide";
 
 interface IEachRowProps {
   data: IUserData;
@@ -9,9 +12,9 @@ interface IEachRowProps {
 export const EachRow: React.FC<IEachRowProps> = ({ data }) => {
   return (
     <tr>
-      <td className="table__data">{data.id}</td>
-      <td className="table__data">{data.username}</td>
-      <td className="table__data">{data.phone}</td>
+      <td className={Styles.tableData}>{data.id}</td>
+      <td className={Styles.tableData}>{data.username}</td>
+      <td className={Styles.tableData}>{data.phone}</td>
     </tr>
   );
 };
